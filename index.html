@@ -1,0 +1,48 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Voice Recorder</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      @keyframes pulse {
+        0% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.1);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+
+      .pulse {
+        animation: pulse 1s infinite;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container p-4 text-center">
+      <button
+        id="record"
+        class="bg-blue-500 hover:bg-blue-700 text-white text-xl py-2 px-4 rounded"
+      >
+        🎤 Record
+      </button>
+      <div class="p-4"></div>
+      <button
+        id="stop"
+        class="bg-red-500 hover:bg-red-700 text-white text-xl py-2 px-4 rounded"
+      >
+        🛑 Stop
+      </button>
+      <div class="p-4"></div>
+      <audio id="audio" controls class="container text-center"></audio>
+    </div>
+    <script src="/main.js"></script>
+  </body>
+</html>
